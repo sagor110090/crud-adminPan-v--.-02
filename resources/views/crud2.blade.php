@@ -73,7 +73,7 @@
                             <input type="text" class="form-control" id="rname" placeholder="function name">
                             <select id="rtype" class="form-control">
                                 <option value="belongsTo">belongsTo</option>
-                                <option value="hasManey">hasManey</option>
+                                <option value="hasManey">hasMany</option>
                             </select>
 
                             <input type="text" class="form-control" id="rclass" placeholder="App\class">
