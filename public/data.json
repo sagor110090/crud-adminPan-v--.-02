@@ -1,0 +1,1 @@
+{"fields":[{"name":"ss","type":"string"},{"name":"Home","type":"bigint#unsigned"}],"foreign_keys":[{"column":"Home","references":"id","on":"users","onDelete":"cascade"}],"validations":[],"relationships":[]}
