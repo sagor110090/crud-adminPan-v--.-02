@@ -22,5 +22,3 @@ Route::get('/crudIndex', 'HomeController@crudIndex');
 Route::get('/crud2index', 'HomeController@crud2index');
 Route::post('/jsonSave', 'HomeController@jsonSave');
 Route::post('/crudMaker', 'HomeController@crudMaker');
- 
-
