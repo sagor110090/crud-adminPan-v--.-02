@@ -18,7 +18,7 @@ return [
     /**
      * Columns number to show in view's table.
      */
-    'view_columns_number' => 5,
+    'view_columns_number' => 10,
 
     /**
      * Delimiter for template vars

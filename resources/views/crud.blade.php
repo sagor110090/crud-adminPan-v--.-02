@@ -1,6 +1,11 @@
-@extends('layouts.app')
-
+@extends('layouts.app',['pageTitle' => __('Crud 1')])
 @section('content')
+
+@component('layouts.parts.breadcrumb')
+    @slot('title')
+        {{ __('Crud 1') }}
+    @endslot
+@endcomponent
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">

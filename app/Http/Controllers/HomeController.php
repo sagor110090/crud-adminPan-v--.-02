@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Artisan;
 use DB;
+use Session;
+
 
 class HomeController extends Controller
 {
@@ -17,7 +19,27 @@ class HomeController extends Controller
     
     public function index()
     {
-        return view('home');
+        return view('dashboard');
+    }
+
+    public function sidebar()
+    {
+        $value = Session::get('key');
+        // dd($value);
+        if ($value != 'on') {
+            Session::put('key', 'on');
+            return 'created';
+        }else{
+            Session::forget('key');
+            Session::put('key', 'off');
+
+            return 'forget';
+        }
+        
+    }
+    public function sidebarShow()
+    {
+        return response()->json(Session::get('key'));
     }
     public function crud2index()
     {
@@ -27,6 +49,11 @@ class HomeController extends Controller
     public function crudIndex()
     {
         return view('crud');
+    }
+
+    public function themes()
+    {
+        $themes = DB::table('themes')->get();
     }
 
     public function jsonSave(Request $request)
@@ -115,6 +142,7 @@ class HomeController extends Controller
         }
         if ($request->name!=null) {
         Artisan::call('crud:generate "'.$request->modelName.'" --fields_from_file="data.json" --view-path=admin --controller-namespace=Admin --route-group=admin --form-helper=html');
+        Artisan::call('migrate');
      
         return redirect()->back()->with('success', 'make successfully!');
 
@@ -141,6 +169,7 @@ class HomeController extends Controller
         return redirect()->back()->with('error', 'error Give the input carefully!');
             
     }
+   
 
     
 }
