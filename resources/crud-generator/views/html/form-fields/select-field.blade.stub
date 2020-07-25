@@ -1,5 +1,9 @@
-<select name="%%itemName%%" class="form-control" id="%%itemName%%" %%required%%>
-    @foreach (json_decode('%%options%%', true) as $optionKey => $optionValue)
-        <option value="{{ $optionKey }}" {{ (isset($%%crudNameSingular%%->%%itemName%%) && $%%crudNameSingular%%->%%itemName%% == $optionKey) ? 'selected' : ''}}>{{ $optionValue }}</option>
-    @endforeach
-</select>
+ 
+{{--<select class="form-control selectric" name="%%itemName%%" id="%%itemName%%" %%required%%>
+        @foreach (\App\::all() as $item)
+        <option value="{{$item->id}}" @if(isset($%%crudNameSingular%%->%%itemName%%))
+            @if($%%crudNameSingular%%->%%itemName%% == $item->name) selected @endif
+            @endif>
+            {{$item->name}}
+        </option>
+@endforeach--}}

@@ -1,1 +1,1 @@
-{"fields":[{"name":"name","type":"string"},{"name":"image","type":"file"}],"foreign_keys":[],"validations":[],"relationships":[]}
+{"fields":[{"name":"name","type":"string"},{"name":"user_id","type":"integer#unsigned"}],"foreign_keys":[],"validations":[],"relationships":[]}

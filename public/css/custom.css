@@ -229,3 +229,23 @@
 
      height: 50px !important;
  }
+
+/* image upload css end */
+
+::-webkit-file-upload-button {
+    background: #353c48;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 10px !important;
+    border: none;
+    cursor: pointer;
+    border: 1px solid white;
+    margin-bottom: 4px !important;
+    /* font-size: 10px !important; */
+    /* height: 40px;
+    width: 100px; */
+}
+
+::-webkit-file-upload-button:hover {
+    background: red;
+}
