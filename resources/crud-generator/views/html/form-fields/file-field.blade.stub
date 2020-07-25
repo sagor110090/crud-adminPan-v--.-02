@@ -9,7 +9,7 @@
             <div class="avatar-upload">
                 <div class="avatar-preview">
                     <img id="%%itemName%%" class="avatar-preview"
-                        src="{{ isset($%%crudNameSingular%%->%%itemName%%) ? Storage::url($%%crudNameSingular%%->%%itemName%%) : asset('assets/img/upload.png')}}"
+                        src="{{ isset($%%crudNameSingular%%->%%itemName%%) ? Storage::url($%%crudNameSingular%%->%%itemName%%) : asset('img/upload.png')}}"
                         alt="image" />
                 </div>
             </div>
